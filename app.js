@@ -1,8 +1,20 @@
-const express = require('express')
-const app = express()
+const express = require('express');
+const app = express();
+const path = require('path');
+const pug = require('pug');
 
-app.get('/', function (req, res) {
-  res.send('Hello World!')
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'pug');
+
+app.use(express.static(__dirname + '/public')); //vertelt waar de statische bestanden staan.
+
+app.get('/', function (req, res) { //router voor index pagina
+  //res.send('Hello World!')
+    res.render('index', {});
+})
+
+app.get('/blubber', function (req, res) { //router voor "test" pagina
+  res.render('blubber', {})
 })
 
 app.listen(3000, function () {
