@@ -9,14 +9,14 @@ app.set('view engine', 'pug');
 app.use(express.static(__dirname + '/public')); //vertelt waar de statische bestanden staan.
 
 app.get('/', function (req, res) { //router voor index pagina
-  //res.send('Hello World!')
+    //res.send('Hello World!')
     res.render('index', {});
 })
 
-app.get('/blubber', function (req, res) { //router voor "test" pagina
-  res.render('blubber', {})
+app.get('/login', function (req, res) { //router voor "test" pagina
+    res.render('login', {})
 })
 
 app.listen(3000, function () {
-  console.log('Example app listening on port 3000!')
+    console.log('Example app listening on port 3000!')
 })
