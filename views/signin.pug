@@ -6,17 +6,17 @@ html(lang='en')
     title test
   body
     h1 registratie
-    form(action='', method='post')
-      input#firstname(type='text', name='firstname', placeholder='firstname')
+    form(action='', method='post', class='form')
+      input#firstname(type='text', name='firstname', placeholder='firstname', class='form__input')
       br
-      input#lastname(type='text', name='lastname', placeholder='lastname')
+      input#lastname(type='text', name='lastname', placeholder='lastname', class='form__input')
       br
-      input#email(type='text', name='email', placeholder='email')
+      input#email(type='text', name='email', placeholder='email', class='form__input')
       br
-      input#password1(type='password', name='password1', placeholder='password')
+      input#password1(type='password', name='password1', placeholder='password', class='form__input')
       br
-      input#password2(type='password', name='password2', placeholder='bevestig password')
+      input#password2(type='password', name='password2', placeholder='bevestig password', class='form__input')
       br
-      button registreer
+      button.form__submit registreer
     h3 Heeft u al een account?
     a(href='login') login

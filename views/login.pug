@@ -6,11 +6,11 @@ html(lang='en')
     title test
   body
     h1 login
-    form(action='', method='post')
-      input#email(type='text', name='email', placeholder='email')
+    form(action='', method='post', class='form')
+      input#email(type='text', name='email', placeholder='email', class='form__input')
       br
-      input#password(type='password', name='password', placeholder='password')
+      input#password(type='password', name='password', placeholder='password', class='form__input')
       br
-      button login
+      button.form__submit login
     h3 Nog geen account?
     a(href='signin') sign in
