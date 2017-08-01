@@ -13,14 +13,14 @@ app.get('/', function (req, res) { //router voor index pagina
     res.render('index', {});
 })
 
-app.get('/login', function (req, res) { //router voor "test" pagina
-    res.render('login', {})
+app.get('/login', function (req, res) { //router voor "login" pagina
+    res.render('login', {});
 })
 
-app.get('/signin', function (req, res) { //router voor "test" pagina
-    res.render('signin', {})
+app.get('/signin', function (req, res) { //router voor "signin" pagina
+    res.render('signin', {});
 })
 
 app.listen(3000, function () {
-    console.log('Example app listening on port 3000!')
+    console.log('Example app listening on port 3000!');
 })
