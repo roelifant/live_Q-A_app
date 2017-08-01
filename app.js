@@ -17,6 +17,10 @@ app.get('/login', function (req, res) { //router voor "test" pagina
     res.render('login', {})
 })
 
+app.get('/signin', function (req, res) { //router voor "test" pagina
+    res.render('signin', {})
+})
+
 app.listen(3000, function () {
     console.log('Example app listening on port 3000!')
 })

@@ -1,0 +1,21 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title test
+  body
+    h1 registratie
+    form(action='', method='post')
+      input#firstname(type='text', name='firstname', placeholder='firstname')
+      br
+      input#lastname(type='text', name='lastname', placeholder='lastname')
+      br
+      input#email(type='text', name='email', placeholder='email')
+      br
+      input#password1(type='password', name='password1', placeholder='password')
+      br
+      input#password2(type='password', name='password2', placeholder='bevestig password')
+      br
+      button registreer
+    h3 Heeft u al een account?
+    a(href='login') login
