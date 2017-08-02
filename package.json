@@ -19,5 +19,9 @@
   "dependencies": {
     "express": "^4.15.3",
     "pug": "^2.0.0-rc.2"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.7.0"
   }
 }
