@@ -2,6 +2,7 @@ const gulp = require('gulp');
 const sass = require('gulp-sass');
 const cleanCSS = require('gulp-clean-css');
 const concatCSS = require('gulp-concat-css');
+const minify = require('gulp-minify');
 const imagemin = require('gulp-imagemin');
 
 gulp.task('sass', function() {
@@ -23,10 +24,23 @@ gulp.task('minify-css', function() { //concatCSS lijkt me hier echter overbodig 
  .pipe(gulp.dest('./public/dist/stylesheets'))
 });
 
+gulp.task('minify-js', function() {
+  gulp.src('./public/src/scripts/*.js')
+    .pipe(minify({
+        ext:{
+            src:'-debug.js',
+            min:'-min.js'
+        },
+        exclude: ['tasks'],
+        ignoreFiles: ['.combo.js', '-min.js']
+    }))
+    .pipe(gulp.dest('./public/dist/scripts'))
+});
+
 gulp.task('imagemin', () =>
     gulp.src('./public/src/images/*')
     .pipe(imagemin())
     .pipe(gulp.dest('./public/dist/images'))
 );
 
-gulp.task('default', ['sass', 'minify-css', 'imagemin']);
+gulp.task('default', ['sass', 'minify-css', 'minify-js', 'imagemin']);
