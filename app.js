@@ -3,6 +3,12 @@ const app = express();
 const router = express.Router();
 const path = require('path');
 const pug = require('pug');
+const mongoose = require('mongoose');
+const passport = require('passport');
+
+mongoose.connect('mongodb://localhost/live_q-a_app', {
+  useMongoClient: true,
+});
 
 //routes
 const login = require('./app/routes/login.js');
